@@ -1,0 +1,178 @@
+
+body, h1, h2, h3, h4, h5, h6, hr, p, div, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, div, legend, button, input, textarea, th, td {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) -33.28%, rgba(0, 0, 0, 0) 115.86%);
+  // background: #212121;
+}
+
+header{
+  background: #fff;
+}
+
+html {
+  color: #000;
+  overflow-y: scroll;
+  overflow: -moz-scrollbars;
+  font-family: 'PingFang SC';
+  color: #333;
+}
+
+body, button, input, select, textarea {
+  font: 12px arial
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%
+}
+
+em {
+  font-style: normal
+}
+
+small {
+  font-size: 12px
+}
+
+ul, ol {
+  list-style: none
+}
+
+a {
+  text-decoration: none
+}
+
+a:hover {
+  text-decoration: underline
+}
+
+legend {
+  color: #000
+}
+
+fieldset, img {
+  border: 0
+}
+
+button, input, select, textarea {
+  font-size: 100%
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+
+img {
+  -ms-interpolation-mode: bicubic
+}
+
+textarea {
+  resize: vertical
+}
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+
+
+.pagination{
+  justify-content: center;
+  
+  button, .el-pager li{
+    border: 0.5px solid #DEDEDE;
+    width: 38px;
+    height: 38px;
+    margin-right: 16px !important;
+    padding: 0;
+    color: #999;
+    font-size: 14px;
+    &.is-active{
+      background: #333;
+      color: #fff;
+    }
+  }
+  button{
+    color: #333;
+    .el-icon{
+      font-size: 14px;
+    }
+  }
+}
+
+.banner {
+  font-size: 0;
+  height: 600px;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+  background:linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+  img, video{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    right: 0;
+    margin: auto;
+    z-index: -1;
+    max-width: unset;
+  }
+}
+
+.crumbs{
+  margin-top: 338px;
+  font-size: 32px;
+  color: #fff;
+  text-align: left;
+  span{
+    font-size: 16px;
+    padding-left: 11px;
+  }
+}
+
+main.container{
+  background: #fff;
+  overflow: hidden;
+  margin-top: -157px;
+  position: relative;
+  z-index: 2;
+  padding-bottom: 102px;
+}
+
+img{
+  max-width: 100%;
+}
+
+@media screen and (max-width: 1300px) {
+  .container{
+    
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .banner{
+    height: 300px;
+    display: flex;
+    align-items: center;
+  }
+  .crumbs{
+    text-align: center;
+    margin-top: 0;
+  }
+  main.container{
+    margin-top: 0;
+  }
+
+  .el-dialog{
+    --el-dialog-width: 90% !important;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  
+}

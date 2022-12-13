@@ -1,0 +1,720 @@
+[
+    {
+        "classfiy_id": 8,
+        "product_name": "﹣150℃深低温保存箱",
+        "product_id": 52,
+        "brand_id":2,"brand_name":"海尔hiaer",
+        "product_image": "-150℃diwenbaowenxiang.png",
+        "detail_pdf": "-150℃diwenbaowenxiang.jpeg"
+    },
+    {
+        "classfiy_id": 8,
+        "product_name": "﹣86℃超低温保存箱",
+        "product_id": 53,
+        "brand_id":2,"brand_name":"海尔hiaer",
+        "product_image": "-86℃diwenbaowenxiang.png",
+        "detail_pdf": "-86℃DW-86L726G.jpeg"
+    },
+    {
+        "classfiy_id": 8,
+        "product_name": "﹣60℃超低温保存箱",
+        "product_id": 54,
+        "brand_id":2,"brand_name":"海尔hiaer",
+        "product_image": "-60℃diwenbaowenxiang.png",
+        "detail_pdf": ""
+    },
+    {
+        "classfiy_id": 8,
+        "product_name": "﹣40℃低温保存箱",
+        "product_id": 55,
+        "brand_id":2,"brand_name":"海尔hiaer",
+        "product_image": "-40℃diwenbaowenxiang.png",
+        "detail_pdf": "-40℃DW-40L278J.jpg"
+    },
+    {
+        "classfiy_id": 8,
+        "product_name": "﹣30℃低温保存箱",
+        "product_id": 56,
+        "brand_id":2,"brand_name":"海尔hiaer",
+        "product_image": "-30℃diwenbaowenxiang.png",
+        "detail_pdf":"-30℃DW-30L818BP.jpeg"
+    },
+    {
+        "classfiy_id": 8,
+        "product_name": "﹣25℃低温保存箱",
+        "product_id": 57,
+        "brand_id":2,"brand_name":"海尔hiaer",
+        "product_image": "-25℃diwenbaowenxiang.png",
+        "detail_pdf": "-25℃DW-25L26225L92.jpg"
+    },
+    {
+        "classfiy_id": 3,
+        "product_name": "2℃-8℃冷藏冷冻箱",
+        "product_id": 58,
+        "brand_id":2,"brand_name":"海尔hiaer",
+        "product_image": "2℃-8℃lcldx.png",
+        "detail_pdf": "2℃-8℃lcldx.jpg"
+    },
+    {
+        "classfiy_id": 6,
+        "product_name": "液氮罐",
+        "product_id": 59,
+        "brand_id":2,"brand_name":"海尔hiaer",
+        "product_image": "ydanguan.png",
+        "detail_pdf":"ydanguan.pdf"
+    },
+    {
+        "classfiy_id": 4,
+        "product_name": "台式高速微量冷冻离心机",
+        "product_id": 60,
+        "brand_id":2,"brand_name":"海尔hiaer",
+        "product_image": "tsgswlldlixinji.png",
+        "detail_pdf":"tsgswlldlixinji.pdf.png"
+    },
+    {
+        "classfiy_id": 2,
+        "product_name": "智净洁净工作台",
+        "product_id": 61,
+        "brand_id":2,"brand_name":"海尔hiaer",
+        "product_image": "znjingjiegongzt.png",
+        "detail_pdf": "jingjiegongzt.pdf"
+    },
+    {
+        "classfiy_id": 2,
+        "product_name": "经典洁净工作台",
+        "product_id": 62,
+        "brand_id":2,"brand_name":"海尔hiaer",
+        "product_image": "jdjingjiegongzt.png",
+        "detail_pdf": "jingjiegongzt.pdf"
+    },
+    {
+        "classfiy_id": 5,
+        "product_name": "智净生物安全柜",
+        "product_id": 63,
+        "brand_id":2,"brand_name":"海尔hiaer",
+        "product_image": "zjshengwuanquangui.png",
+        "detail_pdf":"yunxilieshengwuanqg.jpg"
+    },
+    {
+        "classfiy_id": 5,
+        "product_name": "智联生物安全柜",
+        "product_id": 64,
+        "brand_id":2,"brand_name":"海尔hiaer",
+        "product_image": "zlswuanquangui.png",
+        "detail_pdf":"yunxilieshengwuanqg.jpg"
+    },
+    {
+        "classfiy_id": 1,
+        "product_name": "二氧化碳培养箱",
+        "product_id": 65,
+        "brand_id":2,"brand_name":"海尔hiaer",
+        "product_image": "CO2peiyux.png",
+        "detail_pdf": "CO2peiyux.pdf"
+    },
+    {
+        "classfiy_id": 37,
+        "product_name": "QuantStudio Q 数字 PCR",
+        "product_id": 66,
+        "brand_id":3,"brand_name":"thermofisher",
+        "product_image": "QuantStudio-sz-PCR.png"
+    },
+    {
+        "classfiy_id": 38,
+        "product_name": "QuantStudio 1",
+        "product_id": 67,
+        "brand_id":3,"brand_name":"thermofisher",
+        "product_image": "QuantStudio1.png"
+    },
+    {
+        "classfiy_id": 38,
+        "product_name": "QuantStudio 3",
+        "product_id": 68,
+        "brand_id":3,"brand_name":"thermofisher",
+        "product_image": "QuantStudio3.png"
+    },
+    {
+        "classfiy_id": 38,
+        "product_name": "QuantStudio 5",
+        "product_id": 69,
+        "brand_id":3,"brand_name":"thermofisher",
+        "product_image": "QuantStudio5.png"
+    },
+    {
+        "classfiy_id": 38,
+        "product_name": "QuantStudio 6 Flex",
+        "product_id": 70,
+        "brand_id":3,"brand_name":"thermofisher",
+        "product_image": "QuantStudio6.png"
+    },
+    {
+        "classfiy_id": 38,
+        "product_name": "QuantStudio 7 Flex",
+        "product_id": 71,
+        "brand_id":3,"brand_name":"thermofisher",
+        "product_image": "QuantStudio7flex.png"
+    },
+    {
+        "classfiy_id": 38,
+        "product_name": "QuantStudio 12 Flex",
+        "product_id": 72,
+        "brand_id":3,"brand_name":"thermofisher",
+        "product_image": "QuantStudio12flex.png"
+    },
+    {
+        "classfiy_id": 39,
+        "product_name": "STEP ONE",
+        "product_id": 73,
+        "brand_id":3,"brand_name":"thermofisher",
+        "product_image": "StepOne.png"
+    },
+    {
+        "classfiy_id": 39,
+        "product_name": "STEP ONE PLUS",
+        "product_id": 74,
+        "brand_id":3,"brand_name":"thermofisher",
+        "product_image": "StepOne-plus.png"
+    },
+    {
+        "classfiy_id": 31,
+        "product_name": "MO",
+        "product_id": 75,
+        "brand_id":4,"brand_name":"nanotemper",
+        "product_image": "MO.png",
+        "detail_pdf": "wlrydy-Monolith-xl.pdf"
+    },
+    {
+        "classfiy_id": 31,
+        "product_name": "MO Pico",
+        "product_id": 76,
+        "brand_id":4,"brand_name":"nanotemper",
+        "product_image": "MO-Pico.png",
+        "detail_pdf": "wlrydy-Monolith-xl.pdf"
+    },
+    {
+        "classfiy_id": 31,
+        "product_name": "MO Labelfree",
+        "product_id": 77,
+        "brand_id":4,"brand_name":"nanotemper",
+        "product_image": "MO-Labelfree.png",
+        "detail_pdf": "wlrydy-Monolith-xl.pdf"
+    },
+    {
+        "classfiy_id": 31,
+        "product_name": "MO Automated",
+        "product_id": 78,
+        "brand_id":4,"brand_name":"nanotemper",
+        "product_image": "MO-Automated.png",
+        "detail_pdf": "wlrydy-Monolith-xl.pdf"
+    },
+    {
+        "classfiy_id": 30,
+        "product_name": "PR 48",
+        "product_id": 79,
+        "brand_id":4,"brand_name":"nanotemper",
+        "product_image": "PR-48.png",
+        "detail_pdf": "dbwdx-PR-xl.pdf"
+    },
+    {
+        "classfiy_id": 30,
+        "product_name": "PR Panta",
+        "product_id": 80,
+        "brand_id":4,"brand_name":"nanotemper",
+        "product_image": "PR-Panta.png",
+        "detail_pdf": "dbwdx-PR-xl.pdf"
+    },
+    {
+        "classfiy_id": 30,
+        "product_name": "PR Plex",
+        "product_id": 81,
+        "brand_id":4,"brand_name":"nanotemper",
+        "product_image": "PR-Plex.png",
+        "detail_pdf": "dbwdx-PR-xl.pdf"
+    },
+    {
+        "classfiy_id": 30,
+        "product_name": "PR Plex+Robotic",
+        "product_id": 82,
+        "brand_id":4,"brand_name":"nanotemper",
+        "product_image": "PR-Plex+Robotic.png",
+        "detail_pdf": "dbwdx-PR-xl.pdf"
+    },
+    {
+        "classfiy_id": 35,
+        "product_name": "KINETIX",
+        "product_id": 83,
+        "brand_id":5,"brand_name":"teledyne photometrics",
+        "product_image": "KINETIX.png",
+        "detail_pdf": "PM-Kinetix.pdf"
+    },
+    {
+        "classfiy_id": 36,
+        "product_name": "Prime 95B",
+        "product_id": 85,
+        "brand_id":5,"brand_name":"teledyne photometrics",
+        "product_image": "Prime-95B.png",
+        "detail_pdf": "PM-Prime95B.pdf"
+
+    },
+    {
+        "classfiy_id": 36,
+        "product_name": "Prime BSI",
+        "product_id": 86,
+        "brand_id":5,"brand_name":"teledyne photometrics",
+        "product_image": "Prime-BSI.png",
+        "detail_pdf": "PrimeBSI-Datasheet_Rev_A4_-07312020.pdf"
+    },
+    {
+        "classfiy_id": 33,
+        "product_name": "PowerTome XL",
+        "product_id": 88,
+        "brand_id":6,"brand_name":"rmc boeckeler",
+        "product_image": "PowerTome-XL.png",
+        "detail_pdf": "RMC-cbqpjcpml.pdf"
+    },
+    {
+        "classfiy_id": 33,
+        "product_name": "PowerTome PC",
+        "product_id": 89,
+        "brand_id":6,"brand_name":"rmc boeckeler",
+        "product_image": "PowerTome-PC.png",
+        "detail_pdf": "RMC-cbqpjcpml.pdf"
+    },
+    {
+        "classfiy_id": 33,
+        "product_name": "PowerTome PCZ",
+        "product_id": 90,
+        "brand_id":6,"brand_name":"rmc boeckeler",
+        "product_image": "PowerTome-PCZ.png",
+        "detail_pdf": "RMC-cbqpjcpml.pdf"
+    },
+    {
+        "classfiy_id": 33,
+        "product_name": "PowerTome 3D",
+        "product_id": 91,
+        "brand_id":6,"brand_name":"rmc boeckeler",
+        "product_image": "PowerTome-3D.png",
+        "detail_pdf": "RMC-cbqpjcpml.pdf"
+    },
+    {
+        "classfiy_id": 32,
+        "product_name": "PowerTome LN-Ultra",
+        "product_id": 92,
+        "brand_id":6,"brand_name":"rmc boeckeler",
+        "product_image": "PowerTome-LN-Ultra.png"
+    },
+    {
+        "classfiy_id": 34,
+        "product_name": "ATUMtome",
+        "product_id": 93,
+        "brand_id":6,"brand_name":"rmc boeckeler",
+        "product_image": "ATUMtome.png"
+    },
+    {
+        "classfiy_id": 34,
+        "product_name": "ASH2",
+        "product_id": 94,
+        "brand_id":6,"brand_name":"rmc boeckeler",
+        "product_image": "ASH2.png"
+    },
+    {
+        "classfiy_id": 28,
+        "product_name": "Cellsearch循环肿瘤细胞捕获平台",
+        "product_id": 95,
+        "brand_id":7,"brand_name":"meinarini",
+        "product_image": "Cellsearch-xhzlxbbhpt.png",
+        "detail_pdf": "Cellsearch-xhzlxbbhpt.pdf"
+    },
+    {
+        "classfiy_id": 29,
+        "product_name": "DEPArray数字细胞分选平台",
+        "product_id": 97,
+        "brand_id":7,"brand_name":"meinarini",
+        "product_image": "DEPArrayszxbfxpt.png",
+        "detail_pdf": "DEPArrayszxbfxpt.pdf"
+    },
+    {
+        "classfiy_id": 26,
+        "product_name": "SC系列彩色相机",
+        "product_id": 99,
+        "brand_id":8,"brand_name":"img",
+        "product_image": "SC-caisexj.png",
+        "detail_pdf":"iMG-xwxj.pdf"
+    },
+    {
+        "classfiy_id": 27,
+        "product_name": "荧光显微相机",
+        "product_id": 100,
+        "brand_id":8,"brand_name":"img",
+        "product_image": "ygxwxj.png",
+        "detail_pdf": "iMG-xwxjyg.pdf"
+    },
+    {
+        "classfiy_id": 25,
+        "product_name": "PE-300系列",
+        "product_id": 101,
+        "brand_id":9,"brand_name":"coolled",
+        "product_image": "PE-300xl.png",
+        "detail_pdf": "gy-coolLED-PE300.pdf"
+    },
+    {
+        "classfiy_id": 25,
+        "product_name": "PE-340fura",
+        "product_id": 102,
+        "brand_id":9,"brand_name":"coolled",
+        "product_image": "PE-340fura.png",
+        "detail_pdf":"gy-coolLED-PE340fura.pdf"
+    },
+    {
+        "classfiy_id": 25,
+        "product_name": "PE-4000",
+        "product_id": 103,
+        "brand_id":9,"brand_name":"coolled",
+        "product_image": "PE-4000.png",
+        "detail_pdf": "gy-coolLED-pE-4000.pdf"
+    },
+    {
+        "product_id": 1,
+        "classfiy_id": 7,
+        "product_name": "N-SIM-S",
+        "brand_id":1,"brand_name":"Nikon",
+        "product_image": "N-SIM-S.png"
+    },
+    {
+        "product_id": 2,
+        "classfiy_id": 7,
+        "product_name": "N-STORM",
+        "brand_id":1,"brand_name":"Nikon",
+        "product_image": "N-STORM.png",
+        "detail_pdf": "N-SIM-S&N-STORM.pdf"
+    },
+    {
+        "product_id": 4,
+        "classfiy_id": 11,
+        "product_name": "AXR MP+",
+        "brand_id":1,"brand_name":"Nikon",
+        "product_image": "AXR-MP+.png",
+        "detail_pdf": "AXR-MP.pdf"
+    },
+    {
+        "product_id": 7,
+        "classfiy_id": 13,
+        "product_name": "AX/AXR",
+        "brand_id":1,"brand_name":"Nikon",
+        "product_image": "AX:AXR.png",
+        "detail_pdf": "AX:AXR.pdf"
+    },
+    {
+        "product_id": 8,
+        "classfiy_id": 13,
+        "product_name": "C2+",
+        "brand_id":1,"brand_name":"Nikon",
+        "product_image": "C2+.png",
+        "detail_pdf": "C2+.pdf"
+    },
+    {
+        "product_id": 10,
+        "classfiy_id": 24,
+        "product_name": "CSU-X1",
+        "brand_id":1,"brand_name":"Nikon",
+        "product_image": "CSU-X1.png",
+        "detail_pdf": ""
+    },
+    {
+        "product_id": 11,
+        "classfiy_id": 24,
+        "product_name": "CSU-W1",
+        "brand_id":1,"brand_name":"Nikon",
+        "product_image": "CSU-W1.png"
+    },
+    {
+        "product_id": 12,
+        "classfiy_id": 24,
+        "product_name": "CSU-W1 SoRa",
+        "brand_id":1,"brand_name":"Nikon",
+        "product_image": "CSU-W1-SoRa.png",
+        "detail_pdf": ""
+    },
+    {
+        "product_id": 13,
+        "classfiy_id": 9,
+        "product_name": "Ti2-E",
+        "brand_id":1,"brand_name":"Nikon",
+        "product_image": "Ti2-E.png",
+        "detail_pdf": "ECLIPSE-Ti2-A/E/U.pdf"   
+    },
+    {
+        "product_id": 14,
+        "classfiy_id": 9,
+        "product_name": "Ti2-A",
+        "brand_id":1,"brand_name":"Nikon",
+        "product_image": "Ti2-A.png",
+        "detail_pdf": "ECLIPSE-Ti2-A/E/U.pdf"
+    },
+    {
+        "product_id": 15,
+        "classfiy_id": 9,
+        "product_name": "Ti2-U",
+        "brand_id":1,"brand_name":"Nikon",
+        "product_image": "Ti2-U.png",
+        "detail_pdf": "ECLIPSE-Ti2-A/E/U.pdf"
+    },
+    {
+        "product_id": 16,
+        "classfiy_id": 9,
+        "product_name": "Ts2R",
+        "brand_id":1,"brand_name":"Nikon",
+        "product_image": "Ts2R.png",
+        "detail_pdf": "Ts2R&Ts2R-FL.pdf"
+    },
+    {
+        "product_id": 18,
+        "classfiy_id": 9,
+        "product_name": "Ts2R-FL",
+        "brand_id":1,"brand_name":"Nikon",
+        "product_image": "Ts2R-FL.png",
+        "detail_pdf": "Ts2R&Ts2R-FL.pdf"
+    },
+    {
+        "product_id": 19,
+        "classfiy_id": 9,
+        "product_name": "Ts2",
+        "brand_id":1,"brand_name":"Nikon",
+        "product_image": "Ts2.png",
+        "detail_pdf":"ECLIPSE-Ts2&ECLIPES-Ts2-FL.pdf"
+    },
+    {
+        "product_id": 20,
+        "classfiy_id": 9,
+        "product_name": "Ts2-FL",
+        "brand_id":1,"brand_name":"Nikon",
+        "product_image": "Ts2-FL.png",
+        "detail_pdf":"ECLIPSE-Ts2&ECLIPES-Ts2-FL.pdf"
+    },
+    {
+        "product_id": 21,
+        "classfiy_id": 23,
+        "product_name": "Ni-E",
+        "brand_id":1,"brand_name":"Nikon",
+        "product_image": "Ni-E.png",
+        "detail_pdf": "zhengzhixianweijingNi&Cizhonghe.pdf"
+    },
+    {
+        "product_id": 22,
+        "classfiy_id": 23,
+        "product_name": "Ni-U",
+        "brand_id":1,"brand_name":"Nikon",
+        "product_image": "Ni-U.png",
+        "detail_pdf": "zhengzhixianweijingNi&Cizhonghe.pdf"
+    },
+    {
+        "product_id": 23,
+        "classfiy_id": 23,
+        "product_name": "Ci-L/Ci-L PLUS",
+        "brand_id":1,"brand_name":"Nikon",
+        "product_image": "Ci-L-PLUS.png",
+        "detail_pdf": "zhengzhixianweijingNi&Cizhonghe.pdf"
+    },
+    {
+        "product_id": 24,
+        "classfiy_id": 23,
+        "product_name": "Ci-E",
+        "brand_id":1,"brand_name":"Nikon",
+        "product_image": "Ci-E.png",
+        "detail_pdf":"zhengzhixianweijingNi&Cizhonghe.pdf"
+    },
+    {
+        "product_id": 25,
+        "classfiy_id": 23,
+        "product_name": "Ci-S",
+        "brand_id":1,"brand_name":"Nikon",
+        "product_image": "Ci-S.png"
+    },
+    {
+        "product_id": 26,
+        "classfiy_id": 10,
+        "product_name": "FN1",
+        "brand_id":1,"brand_name":"Nikon",
+        "product_image": "FN1.png",
+        "detail_pdf": ""
+    },
+    {
+        "product_id": 27,
+        "classfiy_id": 15,
+        "product_name": "Si",
+        "brand_id":1,"brand_name":"Nikon",
+        "product_image": "Si.png",
+        "detail_pdf": ""
+    },
+    {
+        "product_id": 28,
+        "classfiy_id": 15,
+        "product_name": "Ei",
+        "brand_id":1,"brand_name":"Nikon",
+        "product_image": "Ei.png"
+    },
+    {
+        "product_id": 29,
+        "classfiy_id": 16,
+        "product_name": "LV100N-POL",
+        "brand_id":1,"brand_name":"Nikon",
+        "product_image": "LV100N-POL.png",
+        "detail_pdf": ""
+    },
+    {
+        "product_id": 30,
+        "classfiy_id": 16,
+        "product_name": "Ci-POL",
+        "brand_id":1,"brand_name":"Nikon",
+        "product_image": "Ci-POL.png",
+        "detail_pdf": ""
+    },
+    {
+        "product_id": 31,
+        "classfiy_id": 18,
+        "product_name": "SMZ25",
+        "brand_id":1,"brand_name":"Nikon",
+        "product_image": "SMZ25.png",
+        "detail_pdf": "xianshixianweijinSMZ25&SMZ18.pdf"
+    },
+    {
+        "product_id": 32,
+        "classfiy_id": 18,
+        "product_name": "SMZ18",
+        "brand_id":1,"brand_name":"Nikon",
+        "product_image": "SMZ18.png",
+        "detail_pdf": "xianshixianweijinSMZ25&SMZ18.pdf"
+    },
+    {
+        "product_id": 33,
+        "classfiy_id": 18,
+        "product_name": "SMZ1270/1270i",
+        "brand_id":1,"brand_name":"Nikon",
+        "product_image": "SMZ1270-1270i.png",
+        "detail_pdf": "tishixianweijingzhongheye.pdf"
+    },
+    {
+        "product_id": 34,
+        "classfiy_id": 18,
+        "product_name": "SMZ800N",
+        "brand_id":1,"brand_name":"Nikon",
+        "product_image": "SMZ800N.png",
+        "detail_pdf": "tishixianweijingzhongheye.pdf"
+    },
+    {
+        "product_id": 35,
+        "classfiy_id": 18,
+        "product_name": "SMZ745/745T",
+        "brand_id":1,"brand_name":"Nikon",
+        "product_image": "SMZ745:45T.png",
+        "detail_pdf": "tishixianweijingzhongheye.pdf"
+    },
+    {
+        "product_id": 36,
+        "classfiy_id": 18,
+        "product_name": "SMZ445/460",
+        "brand_id":1,"brand_name":"Nikon",
+        "product_image": "SMZ445&460.png",
+        "detail_pdf": "tishixianweijingzhongheye.pdf"
+    },
+    {
+        "product_id": 37,
+        "classfiy_id": 22,
+        "product_name": "Digital Sight10",
+        "brand_id":1,"brand_name":"Nikon",
+        "product_image": "Digital-Sight10.png",
+        "detail_pdf":"DSseriesBio-2CE-MPAK-4.pdf"
+    },
+    {
+        "product_id": 38,
+        "classfiy_id": 22,
+        "product_name": "Digital Sight1000",
+        "brand_id":1,"brand_name":"Nikon",
+        "product_image": "Digital-Sight1000.png",
+        "detail_pdf":"DSseriesBio-2CE-MPAK-4.pdf"
+    },
+    {
+        "product_id": 39,
+        "classfiy_id": 22,
+        "product_name": "DS-Fi3",
+        "brand_id":1,"brand_name":"Nikon",
+        "product_image": "DS-Fi3.png",
+        "detail_pdf":"DSseriesBio-2CE-MPAK-4.pdf"
+    },
+    {
+        "product_id": 40,
+        "classfiy_id": 22,
+        "product_name": "DS-Qi2",
+        "brand_id":1,"brand_name":"Nikon",
+        "product_image": "DS-Qi2.png",
+        "detail_pdf":"DSseriesBio-2CE-MPAK-4.pdf"
+    },
+    {
+        "product_id": 41,
+        "classfiy_id": 21,
+        "product_name": "D-LEDI荧光照明系统",
+        "brand_id":1,"brand_name":"Nikon",
+        "product_image": "D-LEDI.png"
+    },
+    {
+        "product_id": 45,
+        "classfiy_id": 19,
+        "product_name": "NIS-Elements",
+        "brand_id":1,"brand_name":"Nikon",
+        "product_image": "NIS-Elements.png",
+        "detail_pdf": "NIS-Elements.pdf"
+    },
+    {
+        "product_id": 46,
+        "classfiy_id": 14,
+        "product_name": "Ti2-LAPP",
+        "brand_id":1,"brand_name":"Nikon",
+        "product_image": "Ti2-LAPP.png",
+        "detail_pdf": "DMD.pdf"
+    },
+    {
+        "product_id": 47,
+        "classfiy_id": 17,
+        "product_name": "数码显微无线互动教室",
+        "brand_id":1,"brand_name":"Nikon",
+        "product_image": "shumaxianweiwuxianhudongjiaoshi.png",
+        "detail_pdf": "shumaxianweiwuxianhudongjiaoshi.pdf"
+    },
+    {
+        "product_id": 48,
+        "classfiy_id": 12,
+        "product_name": "BioPipeline LIVE",
+        "brand_id":1,"brand_name":"Nikon",
+        "product_image": "BioPipeline-LIVE.png",
+        "detail_pdf": "BioPipeline-Live-Brochure.pdf"
+    },
+    {
+        "product_id": 49,
+        "classfiy_id": 12,
+        "product_name": "BioPipeline PLATE",
+        "brand_id":1,"brand_name":"Nikon",
+        "product_image": "BioPipeline-PLATE.png",
+        "detail_pdf": "BioPipeline-Plate-Brochure.pdf"
+    },
+    {
+        "product_id": 50,
+        "classfiy_id": 12,
+        "product_name": "BioPipeline SLIDE",
+        "brand_id":1,"brand_name":"Nikon",
+        "product_image": "BioPipeline-SLIDE.png",
+        "detail_pdf": "BioPipeline-Slide-Brochure.pdf"
+    },
+    {
+        "product_id": 51,
+        "classfiy_id": 20,
+        "product_name": "BioStudio-T",
+        "brand_id":1,"brand_name":"Nikon",
+        "product_image": "BioStudio-T.png"
+    },
+    {
+        "product_id": 52,
+        "classfiy_id": 20,
+        "product_name": "BioStudio-mini",
+        "brand_id":1,"brand_name":"Nikon",
+        "product_image": "BioStudio-mini.png"
+    }
+]
