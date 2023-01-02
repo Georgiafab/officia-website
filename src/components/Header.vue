@@ -1,15 +1,19 @@
 <template>
-<header :class="wrapShow &&['wrap-show']">
+<header :class="[wrapShow &&'wrap-show', $route.name === 'home' && 'black']">
   <div class="mobile">
     <div class="btn" @click="wrapShow = !wrapShow">
       <span></span>
       <span></span>
     </div>
-    <img alt="logo" class="logo" src="@/assets/logo.png" />
+    <img alt="logo" @click="$router.push('/')" v-if="$route.name === 'home'" class="logo" src="@/assets/logo2.png" />
+    <img alt="logo" @click="$router.push('/')" v-else class="logo" src="@/assets/logo.jpg" />
+
   </div>
    <div class="wrap">
      <div class="header-top container"> 
-        <img alt="logo" class="logo" src="@/assets/logo.png" />
+        
+      <img alt="logo" @click="$router.push('/')" v-if="$route.name === 'home'" class="logo" src="@/assets/logo2.png" />
+      <img alt="logo" @click="$router.push('/')" v-else class="logo" src="@/assets/logo.jpg" />
         <div class="search-box"> 
             <input type="text" v-model="searchkey" @keyup.enter="toSearch">
             <span @click="toSearch">搜索</span>
@@ -28,6 +32,36 @@
 </template>
 
 <style lang="scss" scoped>  
+.black{
+  background: #1E1E1E;
+  .search-box{
+    border-color: #484848;
+  }
+.wrap{
+  background: #1E1E1E;
+}
+.mobile span{
+  background: #999;
+}
+  .nav a{
+    border-color: #1E1E1E;
+    background: #1E1E1E !important;
+     &.router-link-active{
+      color: #fff !important;
+      border-color: #fff;
+    }
+    &:hover{
+      color: #fff !important;
+    }
+  }
+  .search-box input{
+    background: #1E1E1E;
+    color: #999;
+  }
+  .nav{
+    border-color: #484848;
+  }
+}
 .mobile{
   display: none;
 }
@@ -43,12 +77,17 @@ header .wrap{
   //   width: 171px;
   //   height: 57px;
   // }
+  .logo{
+    max-height: 57px;
+    cursor: pointer;
+  }
 }
 .search-box{
   display: flex;
   width: 405px;
   height: 42px;
   border: 1px solid #ccc;
+  border-radius: 6px;
   // border-radius: 8px;
   padding: 3px;
   
@@ -68,10 +107,17 @@ header .wrap{
     line-height: 34px;
     text-align: center;
     cursor: pointer;
+    border-radius: 6px;
+    &:hover{
+      background: #666;
+    }
+    &:active{
+      background: #444;
+    }
   }
 }
 .nav{
-  padding-top: 2px;
+  // padding-top: 2px;
   border-top: 1px solid #E6E6E6;
   &>div{
     display: flex;
@@ -87,9 +133,14 @@ header .wrap{
     box-sizing: border-box;
     color: #999;
     border-top: 2.5px solid #fff;
-    &.router-link-active ,&.active,&:hover{
+    &.router-link-active ,&.active{
       background: #fff;
       border-top: 2.5px solid #333;
+      color: #333;
+      font-weight: 600;
+    }
+    &:hover{
+      background: #fff;
       color: #333;
       font-weight: 600;
     }
@@ -135,11 +186,12 @@ header .wrap{
   .logo{
     max-height: 30px;
     margin-top: 10px;
+    cursor: pointer;
   }
   .wrap{
     // position: fixed;
     width: 100%;
-    height: calc(100vh - 50px);
+    height: calc(100vh - 43px);
     z-index: 9;
     background: #fff;
     .logo{

@@ -4,35 +4,35 @@
       <swiper
         class="product-banner"
         :slides-per-view="1"
-        
+        :loop="true"
         :autoplay="true"
         :modules="[Pagination,Autoplay]"
         :pagination="{ clickable: true }"
         >
         <swiper-slide>
-          <img src="@/assets/products/banner/banner1.png" alt="">
+          <img src="@/assets/products/banner/banner1.jpg" alt="">
         </swiper-slide>
         <swiper-slide>
-          <img src="@/assets/products/banner/banner2.png" alt="">
+          <img src="@/assets/products/banner/banner2.jpg" alt="">
         </swiper-slide>
         <swiper-slide>
-          <img src="@/assets/products/banner/banner3.png" alt="">
+          <img src="@/assets/products/banner/banner3.jpg" alt="">
         </swiper-slide>
         <swiper-slide>
-          <img src="@/assets/products/banner/banner4.png" alt="">
+          <img src="@/assets/products/banner/banner4.jpg" alt="">
         </swiper-slide>
         <swiper-slide>
-          <img src="@/assets/products/banner/banner5.png" alt="">
+          <img src="@/assets/products/banner/banner5.jpg" alt="">
         </swiper-slide>
          
         <swiper-slide>
-           <video src="@/assets/products/banner/prodvideo2.mp4" autoplay alt="" />
+           <video loop muted src="@/assets/products/banner/prodvideo2.mp4" autoplay alt="" />
         </swiper-slide>
         <swiper-slide>
-           <video src="@/assets/products/banner/prodvideo3.mp4" autoplay alt="" />
+           <video loop muted src="@/assets/products/banner/prodvideo3.mp4" autoplay alt="" />
         </swiper-slide>
         <swiper-slide>
-          <video src="@/assets/products/banner/prodvideo1.mp4" autoplay alt="" />
+          <video loop muted src="@/assets/products/banner/prodvideo1.mp4" autoplay alt="" />
         </swiper-slide>
       </swiper>
     <div class="crumbs container">
@@ -58,11 +58,11 @@
 
     <div class="product">
       <template v-for="product in productList" :key="product.product_id">
-        <ProductItem :class="!product.detail_pdf && 'red'" :proItem="product" v-if="$route.params.classfiy == 0 ? product.brand_id == $route.params.brand : product.classfiy_id == $route.params.classfiy" />
+        <ProductItem @click="dialogshow=true;proItem=product" :class="!product.detail_pdf && 'red'" :proItem="product" v-if="$route.params.classfiy == 0 ? product.brand_id == $route.params.brand : product.classfiy_id == $route.params.classfiy" />
       </template>
     </div>
 
-  
+  <productDialog v-model="dialogshow" :proItem="proItem" />
   </main>
 </template>
 
@@ -77,16 +77,12 @@ import brandList from '@/data/product.brand.json';
 import classfiyList from '@/data/product.classfiy.json';
 import productList from '@/data/product.list.json';
 import ProductItem from '../components/ProductItem.vue';
+import productDialog from '../components/productDialog.vue';
 
-// const getImage = inject('getImage')
-// const dialogTableVisible = ref(false)
-// const proitem = ref()
+const dialogshow = ref(false)
+const proItem = ref()
 const getImage = (name) => {new URL(`../assets/${name}`, import.meta.url).href}
 
-// const clickDetail = (product) => {
-//   dialogTableVisible.value = true
-//   proitem.value = product
-// }
 </script>
 
 <style  lang="scss" scoped>
@@ -97,7 +93,7 @@ const getImage = (name) => {new URL(`../assets/${name}`, import.meta.url).href}
   width: 100%;
   color: #fff;
   z-index: 0;
-  .swiper-slide{
+  :deep(.swiper-slide){
     overflow: hidden;
     &::after{
       content: "";
@@ -118,7 +114,7 @@ const getImage = (name) => {new URL(`../assets/${name}`, import.meta.url).href}
   }
   :deep(.swiper-pagination){
     bottom: 220px;
-    width: 1280px;
+    width: 1200px;
     left: 0;
     right: 0;
     margin: auto;
@@ -127,10 +123,22 @@ const getImage = (name) => {new URL(`../assets/${name}`, import.meta.url).href}
     z-index: 2;
     .swiper-pagination-bullet{
       width: 74px;
-      height: 2px;
-      background: rgba(255, 255, 255, 0.4);
+      height: 20px;
+      background: transparent !important;
       margin: 0;
-      border-radius: 0 !important;
+      &::after{
+        content: "";
+        display: block;
+        width: 74px;
+        height: 2px;
+        background: rgba(255, 255, 255, 0.4);
+        margin: 0;
+        border-radius: 0 !important;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto ;
+      }
       &.swiper-pagination-bullet-active{
         background: rgba(255, 255, 255, 0.4);;
       }
@@ -141,6 +149,7 @@ const getImage = (name) => {new URL(`../assets/${name}`, import.meta.url).href}
 .crumbs{
   position: relative;
   z-index: 2;
+  pointer-events: none;
 }
 ul, li{
   list-style: none;
@@ -163,9 +172,13 @@ ul, li{
     color: #000;
     margin-bottom: 20px;
     text-decoration: none;
+    border: 1px solid #EFEFEF;
     &.active {
       background: #333;
       color: #fff;
+    }
+    &:hover{
+      border: 1px solid #333;
     }
   }
 }
@@ -179,9 +192,13 @@ ul, li{
     font-size: 16px;
     margin-bottom: 14px;
     text-decoration: none;
+    font-weight: 400;
     &.active{
       color: #333;
-
+      font-weight: 600;
+    }
+    &:hover{
+      color: #333;
     }
   }
 }
@@ -195,11 +212,18 @@ ul, li{
   .prod-content{
     
   }
+  :deep(.swiper-pagination){
+    bottom: 50px !important;
+    justify-content: center !important;
+  }
 }
 
 @media screen and (max-width: 900px) {
   .prod-content{
     padding: 30px 20px;
+  }
+  :deep(.swiper-pagination){
+    display: none !important;
   }
   
 }

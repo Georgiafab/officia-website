@@ -1,10 +1,10 @@
 [
-{"brand_id":1,"brand_name":"Nikon"},
-{"brand_id":2,"brand_name":"海尔Hiaer"},
-{"brand_id":3,"brand_name":"ThermoFisher"},
-{"brand_id":4,"brand_name":"NanoTemper"},
-{"brand_id":5,"brand_name":"Teledyne Photometrics"},
-{"brand_id":6,"brand_name":"RMC Boeckeler"},
-{"brand_id":7,"brand_name":"MEINARINI"},
-{"brand_id":8,"brand_name":"IMG"},
-{"brand_id":9,"brand_name":"CoolLED"}]
+{"brand_id":1,"brand_name":"Nikon显微成像设备"},
+{"brand_id":2,"brand_name":"Haier实验室通用设备"},
+{"brand_id":3,"brand_name":"ThermoFisher荧光定量PCR仪"},
+{"brand_id":4,"brand_name":"NanoTemper分子相互作用仪"},
+{"brand_id":5,"brand_name":"Teledyne Photometrics高速成像设备"},
+{"brand_id":6,"brand_name":"RMC Boeckeler电镜制样设备"},
+{"brand_id":7,"brand_name":"MENARINI细胞捕获分选平台"},
+{"brand_id":8,"brand_name":"IMG显微相机"},
+{"brand_id":9,"brand_name":"CoolLED显微光源"}]

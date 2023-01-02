@@ -94,13 +94,14 @@ watch(() => route.params.id, () => {
 }
 .guidance{
     display: flex;
-    margin-top: 40px;
-    margin-bottom: 100px;
+    margin-top: 30px;
+    margin-bottom: 90px;
     justify-content: space-between;
     a{
         color: #999;
-
         font-size: 16px;
+        margin: 10px 20px;
+        flex: 1;
     }
 }
 
@@ -110,6 +111,9 @@ watch(() => route.params.id, () => {
         .top{
             margin-bottom: 30px;
         }
+    }
+    .guidance{
+        flex-direction: column;
     }
 
 }

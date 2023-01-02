@@ -2,7 +2,7 @@
   <el-form :inline="true" :model="formInline" ref="formRef" :rules="rules">
     <div class="flex-item">
       <el-form-item prop="name">
-        <el-input v-model="formInline.name" placeholder="您的称呼：（必填）" />
+        <el-input v-model="formInline.name" placeholder="姓名：（必填）" />
       </el-form-item>
       <el-form-item prop="tel">
         <el-input v-model="formInline.tel" placeholder="联系方式：（必填） " />
@@ -24,13 +24,13 @@
         <el-input
           ype="textarea"
           v-model="formInline.desc"
-          placeholder="您的需求："
+          placeholder="我们能为您做的是："
         />
       </el-form-item>
     </div>
     <p class="sumbit-txt">{{txt}}</p>
 
-    <div class="sumbit-button" @click="handleSumbit">提交信息</div>
+    <div class="sumbit-button" @click="handleSumbit">{{sumbitBtnText}}</div>
 
     <el-dialog custom-class="center-dialog" v-model="centerDialogVisible" title="Warning" width="500px" center>
     <h4>提交成功</h4>
@@ -47,7 +47,8 @@ import { ElMessage } from 'element-plus'
 import axios from 'axios'
 const props= defineProps({
     txt: String,
-    sumbit: Function
+    sumbit: Function,
+    sumbitBtnText: String
 })
 const centerDialogVisible = ref(false)
 const rules = {
@@ -130,17 +131,22 @@ const handleSumbit = () => {
             color: #000;
             margin: 30px 0;
             font-size:18px;
+            font-weight: 400;
         }
         .sumbit-button{
             width: 180px;
             height: 60px;
-            background: #000;
+            background: #333;
             color: #fff;
             margin: 0 auto;
             font-size: 18px;
             line-height: 60px;
             text-align: center;
             cursor: pointer;
+            font-weight: 400;
+            &:hover{
+              background-color: #000;
+            }
         }
     }
 
@@ -153,7 +159,7 @@ const handleSumbit = () => {
       padding: 50px 20px 40px;
       text-align: center;
       color: #000;
-        
+        min-height: auto;
       }
       h4{
         font-size: 24px;
@@ -185,7 +191,7 @@ const handleSumbit = () => {
 
     @media screen and (max-width: 900px) {
       .el-form{
-        padding: 30px;
+        padding: 30px 20px;
       }
       .el-form .flex-item{
         flex-direction: column;

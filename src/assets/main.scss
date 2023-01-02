@@ -5,6 +5,7 @@ body, h1, h2, h3, h4, h5, h6, hr, p, div, blockquote, dl, dt, dd, ul, ol, li, pr
   box-sizing: border-box;
 }
 body{
+  font-family: PingFangSC-Light, sans-serif;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) -33.28%, rgba(0, 0, 0, 0) 115.86%);
   // background: #212121;
 }
@@ -22,7 +23,8 @@ html {
 }
 
 body, button, input, select, textarea {
-  font: 12px arial
+  // font: 12px arial
+  font:12px PingFangSC-Light, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -122,6 +124,7 @@ textarea {
     margin: auto;
     z-index: -1;
     max-width: unset;
+    min-width: 100%;
   }
 }
 
@@ -148,6 +151,13 @@ main.container{
 img{
   max-width: 100%;
 }
+.el-popper.is-dark{
+  --el-text-color-primary: #fff;
+  padding:  4px ;
+  font-size: 0;
+  line-height: 0;
+  margin-left: 10px !important;
+}
 
 @media screen and (max-width: 1300px) {
   .container{
@@ -170,6 +180,7 @@ img{
 
   .el-dialog{
     --el-dialog-width: 90% !important;
+    --el-dialog-margin-top: 5vh;
   }
 }
 

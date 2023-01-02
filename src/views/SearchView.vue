@@ -29,7 +29,7 @@
                 <div class="item" v-for="(list, b) in searchList" :key="b">
                     <div class="item-brand">{{b}}</div>
                     <div class="item-list" >
-                        <ProductItem v-for="item in list" :key="item.product_id" :proItem="item"  />
+                        <ProductItem @click="dialogshow=true;proItem=item" v-for="item in list" :key="item.product_id" :proItem="item" />
                         <!-- <div class="product-item" >
                             <img :src="getImage(`products/${item.product_image}`)" :alt="item.product_name">
                             <p class="title">{{item.product_name}}</p>
@@ -40,6 +40,7 @@
         </template>
         
     </div>
+      <productDialog v-model="dialogshow" :proItem="proItem" />
 </main>
 </template>
 
@@ -48,10 +49,14 @@ import {ref, watch} from 'vue'
 import {useRouter, useRoute} from 'vue-router';
 import productList from '@/data/product.list.json';
 import ProductItem from '../components/ProductItem.vue';
+import productDialog from '../components/productDialog.vue';
+
 const router = useRouter();
 const route = useRoute()
 const searchkey = ref(route.params.key)
 const searchList = ref({})
+const dialogshow = ref(false)
+const proItem = ref()
 const getImage = (name) => new URL(`../assets/${name}`, import.meta.url).href
 const toSearch =() => {
   router.push({name: 'search', params: {key: searchkey.value}})
@@ -104,6 +109,12 @@ main{
     justify-content: center;
     svg{
         margin-right: 20px;
+    }
+    &:hover{
+      background: #666;
+    }
+    &:active{
+      background: #444;
     }
   }
 }
