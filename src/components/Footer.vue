@@ -9,12 +9,12 @@
           <div class="left">
             <p>邮编：518055</p>
             <p>传真：0755-86703513-803</p>
-            <p>地址：<a href="https://map.baidu.com/search/%E5%9C%B0%E5%9D%80%3A%E6%B7%B1%E5%9C%B3%E5%B8%82%E5%8D%97%E5%B1%B1%E5%8C%BA%E5%AD%A6%E8%8B%91%E5%A4%A7%E9%81%931133%E5%8F%B7/@12690610.125,2566935,19z?querytype=s&da_src=shareurl&wd=%E5%9C%B0%E5%9D%80%EF%BC%9A%E6%B7%B1%E5%9C%B3%E5%B8%82%E5%8D%97%E5%B1%B1%E5%8C%BA%E5%AD%A6%E8%8B%91%E5%A4%A7%E9%81%931133%E5%8F%B7&c=340&src=0&pn=0&sug=0&l=13&b=(12657752,2557828;12703832,2583076)&from=webmap&biz_forward=%7B%22scaler%22:2,%22styles%22:%22pl%22%7D&device_ratio=2" target="_blank">深圳市 南山区学苑大道1133号</a></p>
-            <p class="indent"><a href="https://map.baidu.com/search/%E5%B9%BF%E5%B7%9E%E5%B8%82%20%E7%95%AA%E7%A6%BA%E5%8C%BA%E6%8B%9B%E5%95%86%E9%87%91%E5%B1%B1%E8%B0%B7%E6%84%8F%E5%BA%9356%E6%A0%8B/@12617867.345,2613281.99,19z?querytype=s&da_src=shareurl&wd=%E5%B9%BF%E5%B7%9E%E5%B8%82%20%E7%95%AA%E7%A6%BA%E5%8C%BA%E6%8B%9B%E5%95%86%E9%87%91%E5%B1%B1%E8%B0%B7%E6%84%8F%E5%BA%9356%E6%A0%8B&c=340&src=0&pn=0&sug=0&l=19&b=(12690250.125,2566737.75;12690970.125,2567132.25)&from=webmap&biz_forward=%7B%22scaler%22:2,%22styles%22:%22pl%22%7D&device_ratio=2" target="_blank" rel="noopener noreferrer">广州市 番禺区招商金山谷意库56栋</a> </p>
+            <p>地址：<a href="https://map.baidu.com/search/%E5%9C%B0%E5%9D%80%3A%E6%B7%B1%E5%9C%B3%E5%B8%82%E5%8D%97%E5%B1%B1%E5%8C%BA%E5%AD%A6%E8%8B%91%E5%A4%A7%E9%81%931133%E5%8F%B7/@12690610.125,2566935,19z?querytype=s&da_src=shareurl&wd=%E5%9C%B0%E5%9D%80%EF%BC%9A%E6%B7%B1%E5%9C%B3%E5%B8%82%E5%8D%97%E5%B1%B1%E5%8C%BA%E5%AD%A6%E8%8B%91%E5%A4%A7%E9%81%931133%E5%8F%B7&c=340&src=0&pn=0&sug=0&l=13&b=(12657752,2557828;12703832,2583076)&from=webmap&biz_forward=%7B%22scaler%22:2,%22styles%22:%22pl%22%7D&device_ratio=2" target="_blank">深圳市南山区学苑大道1133号</a></p>
+            <p class="indent"><a href="https://map.baidu.com/search/%E5%B9%BF%E5%B7%9E%E5%B8%82%20%E7%95%AA%E7%A6%BA%E5%8C%BA%E6%8B%9B%E5%95%86%E9%87%91%E5%B1%B1%E8%B0%B7%E6%84%8F%E5%BA%9356%E6%A0%8B/@12617867.345,2613281.99,19z?querytype=s&da_src=shareurl&wd=%E5%B9%BF%E5%B7%9E%E5%B8%82%20%E7%95%AA%E7%A6%BA%E5%8C%BA%E6%8B%9B%E5%95%86%E9%87%91%E5%B1%B1%E8%B0%B7%E6%84%8F%E5%BA%9356%E6%A0%8B&c=340&src=0&pn=0&sug=0&l=19&b=(12690250.125,2566737.75;12690970.125,2567132.25)&from=webmap&biz_forward=%7B%22scaler%22:2,%22styles%22:%22pl%22%7D&device_ratio=2" target="_blank" rel="noopener noreferrer">广州市番禺区招商金山谷意库56栋</a> </p>
           </div>
           <div class="center">
             <p>手机：135 9015 2626</p>
-            <p>邮箱：service1@fortuantt.com</p>
+            <p>邮箱：service1@fortunatt.com</p>
             <p>电话：400-8605-616 （深圳）</p>
             <p class="indent">020-8911-8011 （广州）</p>
           </div>

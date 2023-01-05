@@ -4,7 +4,7 @@
         "product_name": "﹣150℃深低温保存箱",
         "product_id": 52,
         "brand_id":2,"brand_name":"海尔hiaer",
-        "product_image": "-150℃diwenbaowenxiang.png",
+        "product_image": "-150℃diwenbaowenxiang1.png",
         "detail_pdf": "-150℃diwenbaowenxiang.png"
     },
     {
@@ -85,7 +85,7 @@
         "product_id": 62,
         "brand_id":2,"brand_name":"海尔hiaer",
         "product_image": "jdjingjiegongzt.png",
-        "detail_pdf": "jdjingjiegongzt.jpeg"
+        "detail_pdf": ["jdjingjiegongzt.jpeg", "jdjingjiegongzt1.jpeg"]
     },
     {
         "classfiy_id": 5,
@@ -93,7 +93,7 @@
         "product_id": 63,
         "brand_id":2,"brand_name":"海尔hiaer",
         "product_image": "zjshengwuanquangui.png",
-        "detail_pdf":"zhijingshengwuanquangui.jpeg"
+        "detail_pdf":["zhijingshengwuanquangui.jpeg", "zhijingshengwuanquangui1.jpeg"]
     },
     {
         "classfiy_id": 5,

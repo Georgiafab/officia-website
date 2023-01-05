@@ -21,7 +21,7 @@
           <p>地址：深圳市南山区学苑大道1133号</p>
           <p>电话：400-8605-616</p>
           <p>手机：135 9015 2626</p>
-          <p>邮箱：service1@fortuantt.com</p>
+          <p>邮箱：service1@fortunatt.com</p>
           <p>服务时间：周一至周五9:00-18:00</p>
 
           <div class="qs-code">
@@ -31,7 +31,7 @@
         </div>
         <div class="tels">
              <div class="item">
-               售前资讯经理<br>
+               售前资询经理<br>
                 <b>0755-8670 3513</b>
                 <!-- 手机：188 8888 8888<br>
                 邮箱：lyhao@fortuantt.com  -->

@@ -18,8 +18,17 @@
 
          <p style="margin-top: 10px">加载中</p>
       </div>
-      <vue-pdf-embed :source="getImage(`products/${proItem.detail_pdf}`)" class="vue-pdf" />
-      <img :src="getImage(`products/${proItem.detail_pdf}`)" alt="" class="vue-pdf">
+      <template v-if="typeof proItem.detail_pdf === 'object'">
+        <template v-for="(item, index) in proItem.detail_pdf" >
+          <vue-pdf-embed :source="getImage(`products/${item}`)"  class="vue-pdf" />
+          <img :src="getImage(`products/${item}`)" alt="" class="vue-pdf">
+        </template>
+      </template>
+      <template v-else>
+        <vue-pdf-embed :source="getImage(`products/${proItem.detail_pdf}`)" class="vue-pdf" />
+        <img :src="getImage(`products/${proItem.detail_pdf}`)" alt="" class="vue-pdf">
+      </template>
+      
       </div>
       <div class="form" v-show="formShow">
         <h2>试试让我们帮助您详细了解该产品？</h2>
