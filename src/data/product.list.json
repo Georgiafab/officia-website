@@ -437,8 +437,8 @@
         "classfiy_id": 13,
         "product_name": "AX/AXR",
         "brand_id":1,"brand_name":"Nikon",
-        "product_image": "AX:AXR.png",
-        "detail_pdf": "AX:AXR.pdf"
+        "product_image": "AX_AXR.png",
+        "detail_pdf": "AX_AXR.pdf"
     },
     {
         "product_id": 8,
@@ -606,7 +606,7 @@
         "product_name": "Ci-POL",
         "brand_id":1,"brand_name":"Nikon",
         "product_image": "Ci-POL.png",
-        "detail_pdf":"ECLIPSE_LV100N:POL:Ci-POL.pdf"
+        "detail_pdf":"ECLIPSE_LV100N_POL_Ci-POL.pdf"
     },
     {
         "product_id": 31,
@@ -645,7 +645,7 @@
         "classfiy_id": 18,
         "product_name": "SMZ745/745T",
         "brand_id":1,"brand_name":"Nikon",
-        "product_image": "SMZ745:45T.png",
+        "product_image": "SMZ745_45T.png",
         "detail_pdf": "tishixianweijingzhongheye.pdf"
     },
     {

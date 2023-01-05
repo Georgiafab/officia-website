@@ -22,7 +22,7 @@
         <div class="right">
            <el-tooltip placement="top" >
             <template #content>
-              <img src="@/assets/code-qq.png" alt="">
+              <img src="@/assets/code-qq.jpg" alt="" class="code-img">
             </template>
             <svg width="18" height="22" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M17.379 13.7823C16.9511 12.3689 16.4589 11.181 15.7019 9.2368C15.8196 4.1303 13.7547 0 8.99885 0C4.18954 0 2.17005 4.21279 2.29844 9.2368C1.5388 11.1837 1.04931 12.3634 0.621336 13.7823C-0.288101 16.7934 0.00612867 18.0391 0.230813 18.0666C0.712279 18.1271 2.10586 15.8007 2.10586 15.8007C2.10586 17.1482 2.77991 18.9053 4.24036 20.173C3.53421 20.3957 1.94804 20.9952 2.32519 21.6524C2.63012 22.1832 7.57318 21.9907 8.99885 21.8257C10.4245 21.9907 15.3676 22.1832 15.6725 21.6524C16.0497 20.998 14.4608 20.3957 13.7573 20.173C15.2178 18.9026 15.8918 17.1454 15.8918 15.8007C15.8918 15.8007 17.2854 18.1271 17.7669 18.0666C17.9942 18.0364 18.2885 16.7907 17.379 13.7823Z" fill="#999999"/>
@@ -31,7 +31,7 @@
             
            <el-tooltip placement="top">
               <template #content>
-                <img src="@/assets/code-ws.png" alt="">
+                <img src="@/assets/code-ws.jpg" alt="" class="code-img">
                 
               </template>
               <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -54,6 +54,9 @@
 </template>
 
 <style lang="scss" scoped>
+  .code-img{
+    max-width: 165px;
+  }
 footer{
   width: 100%;
   background:#333;
@@ -69,6 +72,7 @@ footer{
     display: flex;
     margin: 30px 0 14px;
   }
+
   .left{
     margin-right: 116px;
   }
@@ -80,6 +84,7 @@ footer{
       margin-left: 30px;
       cursor: pointer;
     }
+   
     .code-img{
       position: absolute;
       img:nth-child(2){

@@ -25,7 +25,7 @@
           <p>服务时间：周一至周五9:00-18:00</p>
 
           <div class="qs-code">
-            <img src="@/assets/contact/qs-us.png" alt="qs-us" />
+            <img src="@/assets/contact/qs-us.jpg" alt="qs-us" />
             <p>fortuantt公众号</p>
           </div>
         </div>
