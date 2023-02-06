@@ -168,6 +168,22 @@
         "detail_pdf": "QuantStudio12flex.pdf"
     },
     {
+        "classfiy_id": 38,
+        "product_name": "QuantStudio 6 Pro",
+        "product_id": 107,
+        "brand_id":3,"brand_name":"thermofisher",
+        "product_image": "QuantStudio6Pro.png",
+        "detail_pdf": "QS6ProQS7Pro.pdf"
+    },
+    {
+        "classfiy_id": 38,
+        "product_name": "QuantStudio 7 Pro",
+        "product_id": 108,
+        "brand_id":3,"brand_name":"thermofisher",
+        "product_image": "QuantStudio7Pro.png",
+        "detail_pdf": "QS6ProQS7Pro.pdf"
+    },
+    {
         "classfiy_id": 39,
         "product_name": "STEP ONE",
         "product_id": 73,

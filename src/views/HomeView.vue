@@ -5,7 +5,7 @@
     <h2>AX /AX R</h2>
     <p>智能 深度 清晰的显微镜</p>
     <div class="more-link">
-      <a href="javascript:;" @click="dialogshow=true;proItem={product_name: 'AX /AX R', detail_pdf: 'AX:AXR.pdf'}">进一步了解&nbsp;&nbsp;></a>
+      <a href="javascript:;" @click="dialogshow=true;proItem={product_name: 'AX /AX R', detail_pdf: 'AX_AXR.pdf'}">进一步了解&nbsp;&nbsp;></a>
       <a href="/product/1">  更多尼康产品&nbsp;&nbsp;></a>
     </div>
   </div>
