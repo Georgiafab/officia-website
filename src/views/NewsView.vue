@@ -28,11 +28,21 @@
 
    <el-pagination class="pagination" layout="prev, pager, next" :total="news.length" :pager-count="3" />
   </main>
+  
 </template>
 
 
 <script setup>
+
+//  {
+//     "id": 9,
+//     "title": "深圳富途锐组织架构及部门简介",
+//     "time": "2023.3.14",
+//     "mtime": "<span>14</span><span>2023.3</span>",
+//     "content": "<p> <img src='%new9/img9-1.jpg%'> </p><p>富途锐由总经理总览全局，下设销售部、服务部及管理部，推进公司业务，共同努力促进公司发展。</p><p><b>1、销售部</b> </p><p>销售部负责公司代理产品的品牌推广、市场渠道的建立和销售业务开展。销售部立足专业技术，以客户需求为本，目标是客户提供专业且高性价比的产品以及周到、贴心的服务。</p><p><img src='%new9/img9-2.jpg%'> </p><p><b>2、服务部</b></p><p>服务部负责公司产品安装、售后维护、维修等工作，以专业技术为基础，以零差评售后服务评价为目标，往来于各高校及医院，客户的好评激励专业技术的不断进步！</p><p><img src='%new9/img9-3.jpg%'></p><p><b>3、管理部</b></p><p> 管理部负责公司采购、财务及行政工作，负责财务、资产管理工作。负责综合协调销售及售后工作，负责接待和后勤保障统筹公司日常工作运转。</p><p><img src='%new9/img9-4.jpg%'></p>"
+// },
 import news from '@/data/news.json';
+import { reactive } from 'vue';
 // import { inject } from 'vue';
 // const getImage=inject('getImage')
 const getImage = (name) => new URL(`../assets/${name}`, import.meta.url).href
@@ -52,6 +62,7 @@ const getContent = (content) => content.replace(/%([^%]*)%/g, (c, v) => getImage
   text-decoration: none;
   color: #333;
   position: relative;
+  min-height: 147px;
   &:not(:first-child){
     padding-top: 40px;
   }

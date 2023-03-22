@@ -14,6 +14,15 @@ header{
   background: #fff;
 }
 
+.flex{
+  display: flex;
+  justify-content: center;
+}
+.href img{
+  width: 50%;
+}
+
+
 html {
   color: #000;
   overflow-y: scroll;
