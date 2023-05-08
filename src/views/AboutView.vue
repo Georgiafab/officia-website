@@ -128,7 +128,7 @@ main.container{
         display: flex;
         justify-content: space-between;
         margin-top: -43px;
-        align-items: end;
+        align-items: flex-end;
     }
     .left{
         max-width: 256px;

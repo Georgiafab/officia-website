@@ -14,7 +14,7 @@
       </template>
       <div class="prod" v-show="!formShow">
         <div class="pdf-loading">
-       <img src="@/assets/loading.png" alt="">
+        <img src="@/assets/loading.png" alt="">
 
          <p style="margin-top: 10px">加载中</p>
       </div>

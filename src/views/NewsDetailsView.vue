@@ -12,18 +12,16 @@
      <h1>{{detail?.title}}</h1>
     <p class="time">{{detail?.time}}</p>
    </div>
-    <div class="content" v-html="content">
-       
-    </div>
+    <div class="content" v-html="detail.content"></div>
   </main>
   <!-- @/assets/news/new2/img2-4.jpg -->
   <div class="container">
     <div class="guidance ">
-        <router-link :to="toMsg(index-1).link">
-            {{toMsg(index-1, '上').title}}
+        <router-link :to="toMsg.prev.link">
+            {{toMsg.prev.title}}
         </router-link>
-        <router-link :to="toMsg(index+1).link">
-            {{toMsg(index+1, '下').title}}
+        <router-link :to="toMsg.next.link">
+            {{toMsg.next.title}}
         </router-link>
     </div>
   </div>
@@ -33,20 +31,38 @@
 <script setup>
 import news from '@/data/news.json';
 import {useRoute} from 'vue-router';
-import { inject, watch } from 'vue';
+import { inject, watch, ref, computed } from 'vue';
+// import axios from "axios";
+import {getnewDetail} from '@/utils/api';
 const route = useRoute()
+const loading = inject('loading')
 const id = route.params.id
-const getImage = (name) => new URL(`../assets/${name}`, import.meta.url).href
-const index = news.findIndex(item => item.id == id)
-const detail = news[index]
-const content = detail.content.replace(/%([^%]*)%/g, (c, v) => getImage(`news/${v}`))
+// const getImage = (name) => new URL(`../assets/${name}`, import.meta.url).href
+const detail = ref({})
+// const content = detail.content.replace(/%([^%]*)%/g, (c, v) => getImage(`news/${v}`))
 const reload = inject('reload')
-const toMsg = (i, t) => {
-    return {
-        link: news[i] ? `/news/detail/${news[i]?.id}` : '/news',
-        title: news[i]?.title? `${t}一篇：${news[i].title}` : '返回新闻资讯'
+loading.value = true
+getnewDetail({id}).then((res) => {
+    if (res?.code === 200) {
+        // console.log(res.data)
+        detail.value = res.data
+    //   list.value = data?.data?.list || []
     }
-}
+    loading.value = false
+  });
+const toMsg = computed(() => {
+    const {next, prev} = detail.value
+    return {
+        next: {
+            link: next?.id ? `/news/detail/${next?.id}` : '/news',
+            title: next?.title? `下一篇：${next?.title}` : '返回新闻资讯'
+        },
+        prev: {
+            link: prev?.id ? `/news/detail/${prev?.id}` : '/news',
+            title: prev?.title? `上一篇：${prev?.title}` : '返回新闻资讯'
+        }
+    }
+})
 watch(() => route.params.id, () => {
     reload()
 })
@@ -73,10 +89,10 @@ watch(() => route.params.id, () => {
         padding: 20px 0 32px;
     }
     :deep(.content){
-        img{
-            display: block;
-            margin: 0 auto 50px;
-        }
+        // img{
+        //     display: block;
+        //     margin: 0 auto 50px;
+        // }
         p{
             margin-bottom: 20px;
             text-indent: 36px;
