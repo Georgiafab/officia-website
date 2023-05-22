@@ -1,36 +1,45 @@
 <script setup>
-import { provide, ref } from 'vue';
-import { RouterLink, RouterView, useRoute  } from 'vue-router'
+import { provide, ref } from "vue";
+import { RouterLink, RouterView, useRoute } from "vue-router";
+import { getCompanyDetail, getBannerList } from "@/utils/api";
 // import HelloWorld from './components/HelloWorld.vue'
-import Header from './components/Header.vue'
-import Footer from './components/Footer.vue';
-const getImage = (name) => new URL(`../assets/${name}`, import.meta.url).href
-const routerKey = ref(1)
-const loading = ref(false)
-const reload = () => {
-  routerKey.value++
-}
-provide('getImage', getImage)
-provide('reload', reload)
-provide('loading', loading)
+import Header from "./components/Header.vue";
+import Footer from "./components/Footer.vue";
+const getImage = (name) => new URL(`../assets/${name}`, import.meta.url).href;
+const routerKey = ref(1);
+const loading = ref(false);
 
+const siteData = ref({});
+
+getCompanyDetail().then((res) => {
+  siteData.value.company = res.data;
+});
+getBannerList().then((res) => {
+  siteData.value.banner = res.data;
+});
+const reload = () => {
+  routerKey.value++;
+};
+provide("getImage", getImage);
+provide("reload", reload);
+provide("loading", loading);
+provide("siteData", siteData);
 </script>
 
 <template>
-
-  <Header :key="$route.params.key"/>
-  <div v-loading="loading"   >
+  <Header :key="$route.params.key" />
+  <div v-loading="loading">
     <router-view v-slot="{ Component }">
-    <!-- <transition mode="in-out"> -->
+      <!-- <transition mode="in-out"> -->
       <component :is="Component" :key="routerKey" />
-    <!-- </transition> -->
-   </router-view>
+      <!-- </transition> -->
+    </router-view>
   </div>
   <Footer />
 </template>
 
 <style scoped lang="scss">
-header+header{
+header + header {
   display: none;
 }
 

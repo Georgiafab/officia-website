@@ -1,6 +1,6 @@
 <template>
   <div class="banner">
-    <img src="@/assets/news/banner.jpg" alt="new-banner" />
+    <img :src="siteData?.banner?.news" alt="new-banner" />
     <div class="crumbs container">
       <h1>新闻资讯<span>/ News Center</span></h1>
     </div>
@@ -19,10 +19,7 @@
         </div>
         <div class="m-time" v-html="item.mtime"></div>
         <div class="img">
-          <img
-            :src="item.cover"
-            :alt="item.title"
-          />
+          <img :src="item.cover" :alt="item.title" />
         </div>
         <div class="content">
           <h2>{{ item.title }}</h2>
@@ -44,23 +41,23 @@
 
 <script setup>
 import { ref, inject } from "vue";
-import {getnewList} from '@/utils/api';
-
-const page = ref(1)
-const total = ref(0)
-const list = ref([])
-const loading = inject('loading')
-loading.value= true
+import { getnewList } from "@/utils/api";
+const siteData = inject("siteData");
+const page = ref(1);
+const total = ref(0);
+const list = ref([]);
+const loading = inject("loading");
+loading.value = true;
 getnewList({
   size: 10,
-  page: page.value
+  page: page.value,
 }).then((res) => {
-    if (res?.code === 200) {
-      list.value = res?.data?.list || []
-    }
-    loading.value= false
-  });
-  // console.log();
+  if (res?.code === 200) {
+    list.value = res?.data?.list || [];
+  }
+  loading.value = false;
+});
+// console.log();
 // const getImage = (name) => new URL(`../assets/${name}`, import.meta.url).href;
 
 // const getContent = (content) => content.replace(/%([^%]*)%/g, (c, v) => getImage(`news/${v}`));
