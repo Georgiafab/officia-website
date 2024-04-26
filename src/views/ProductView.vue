@@ -11,6 +11,12 @@
         :pagination="{ clickable: true }"
       >
         <swiper-slide v-for="item in siteData.banner.products" :key="item.key">
+          <!-- <el-image
+            :key="item.value"
+            :src="item.value"
+            lazy
+            v-if="item.isImage"
+          ></el-image> -->
           <img :src="item.value" alt="" v-if="item.isImage" />
           <video loop muted :src="item.value" autoplay v-else alt="" />
         </swiper-slide>
@@ -23,9 +29,9 @@
       <div class="brand">
         <router-link
           v-for="item in brandList"
-          :class="`brand-item ${item._id == brand ? 'active' : ''}`"
-          :to="`/product/${item._id}`"
-          :key="item._id"
+          :class="`brand-item ${item.enTitle == brand ? 'active' : ''}`"
+          :to="`/product/${item.enTitle}`"
+          :key="item.enTitle"
           >{{ item.brand_name }}</router-link
         >
       </div>
@@ -34,21 +40,24 @@
         <router-link
           :to="{
             name: 'product',
-            params: { brand: brand, classfiy: 0 },
+            params: { brand: brand, classfiy: '' },
           }"
           :class="`classfiy_item ${0 == classfiy ? 'active' : ''}`"
           >全部</router-link
         >
-        <template v-for="classfiyItem in classfiyList" :key="classfiyItem._id">
+        <template
+          v-for="classfiyItem in classfiyList"
+          :key="classfiyItem.enTitle"
+        >
           <router-link
             :class="`classfiy_item ${
-              classfiyItem._id == classfiy ? 'active' : ''
+              classfiyItem.enTitle == classfiy ? 'active' : ''
             }`"
             :to="{
               name: 'product',
               params: {
-                brand: classfiyItem.brand_id._id,
-                classfiy: classfiyItem._id,
+                brand: classfiyItem.brand_id.enTitle,
+                classfiy: classfiyItem.enTitle,
               },
             }"
             >{{ classfiyItem.classfiy_name }}
@@ -82,10 +91,6 @@ import "swiper/css";
 import { inject, ref, watch } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import { getBrandList, getClassifyList, getProductList } from "@/utils/api";
-// import {useRoute} from 'vue-router';
-// import brandList from "@/data/product.brand.json";
-// import classfiyList from "@/data/product.classfiy.json";
-// import productList from "@/data/product.list.json";
 import ProductItem from "../components/ProductItem.vue";
 import productDialog from "../components/productDialog.vue";
 const route = useRoute();
@@ -98,30 +103,42 @@ const productList = ref([]);
 const dialogshow = ref(false);
 const proItem = ref();
 const reload = inject("reload");
+const loading = inject("loading");
 const size = 1000;
 
-getBrandList({ size }).then((res) => {
-  brandList.value = res.data.list;
-  if (!brand) {
-    router.replace({
-      name: "product",
-      params: {
-        brand: res.data.list[0]._id,
-      },
-    });
-  }
-});
+loading.value = true;
+getBrandList({ size })
+  .then((res) => {
+    brandList.value = res.data.list;
+    if (!brand) {
+      router.replace({
+        name: "product",
+        params: {
+          brand: res.data.list[0].enTitle,
+        },
+      });
+    }
+  })
+  .finally(() => {
+    loading.value = false;
+  });
 
-getClassifyList({ size, brand_id: brand }).then((res) => {
-  classfiyList.value = res.data.list;
-});
+getClassifyList({ size, brand_id: brand })
+  .then((res) => {
+    classfiyList.value = res.data.list;
+  })
+  .finally(() => {
+    loading.value = false;
+  });
 
-getProductList({ size, brand_id: brand, classfiy_id: classfiy }).then((res) => {
-  productList.value = res.data.list;
-});
-const getImage = (name) => {
-  new URL(`../assets/${name}`, import.meta.url).href;
-};
+getProductList({ size, brand_id: brand, classfiy_id: classfiy })
+  .then((res) => {
+    productList.value = res.data.list;
+    document.title = `${productList.value[0].brand_id.brand_name}-${productList.value[0].classfiy_id.classfiy_name}-深圳市富途锐科技发展有限公司`;
+  })
+  .finally(() => {
+    loading.value = false;
+  });
 
 watch(
   () => route.params,
@@ -192,6 +209,7 @@ watch(
     }
   }
 }
+
 .crumbs {
   position: relative;
   z-index: 2;

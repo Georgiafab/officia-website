@@ -11,7 +11,7 @@
       <router-link
         v-for="item in list"
         :key="item._id"
-        :to="`/news/detail/${item._id}`"
+        :to="`/news/detail/${item.enTitle}`"
         class="news-item"
       >
         <div class="time">
@@ -35,6 +35,7 @@
       :page-size="10"
       :pager-count="3"
       v-model:current-page="page"
+      @current-change="pageChange"
     />
   </main>
 </template>
@@ -48,21 +49,35 @@ const total = ref(0);
 const list = ref([]);
 const loading = inject("loading");
 loading.value = true;
-getnewList({
-  size: 10,
-  page: page.value,
-}).then((res) => {
-  if (res?.code === 200) {
-    list.value = res?.data?.list || [];
-  }
-  loading.value = false;
-});
+const getList = () => {
+  getnewList({
+    size: 10,
+    page: page.value,
+  })
+    .then((res) => {
+      if (res?.code === 200) {
+        list.value = res?.data?.list || [];
+        total.value = res?.data?.total;
+      }
+    })
+    .finally(() => {
+      loading.value = false;
+    });
+};
+getList();
+
+const pageChange = () => {
+  getList();
+};
 // console.log();
 // const getImage = (name) => new URL(`../assets/${name}`, import.meta.url).href;
 
 // const getContent = (content) => content.replace(/%([^%]*)%/g, (c, v) => getImage(`news/${v}`));
 </script>
 <style lang="scss" scoped>
+:deep(.el-pager li.is-active + li) {
+  border-left: 0.5px solid #dedede;
+}
 .news-content {
   padding: 60px;
 }

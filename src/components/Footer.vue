@@ -2,7 +2,7 @@
   <footer>
     <div class="container">
       <div class="logo">
-        <img alt="logo" src="@/assets/logo2.png" />
+        <img alt="logo" :src="siteData.company?.logo2" />
       </div>
       <div class="message">
         <div class="txt">
@@ -179,7 +179,6 @@ footer {
 </style>
 
 <script setup>
-import { template } from "lodash";
 import { inject } from "vue";
 const siteData = inject("siteData");
 </script>

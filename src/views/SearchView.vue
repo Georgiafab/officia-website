@@ -62,7 +62,7 @@
 </template>
 
 <script setup>
-import { ref, watch } from "vue";
+import { ref, watch, inject } from "vue";
 import { useRouter, useRoute } from "vue-router";
 // import productList from '@/data/product.list.json';
 import { getProductList } from "@/utils/api";
@@ -76,22 +76,27 @@ const searchList = ref({});
 const dialogshow = ref(false);
 const productList = ref([]);
 const proItem = ref();
+const loading = inject("loading");
 const getImage = (name) => new URL(`../assets/${name}`, import.meta.url).href;
 const toSearch = () => {
   router.push({ name: "search", params: { key: searchkey.value } });
 };
 
 const getList = (key) => {
-  getProductList({ product_name: searchkey.value, size: 10000 }).then((res) => {
-    productList.value = res.data.list;
-    searchkey.value = key;
-    searchList.value = {};
-    productList.value.forEach((el) => {
-      searchList.value[el.brand_id.brand_name]
-        ? searchList.value[el.brand_id.brand_name].push(el)
-        : (searchList.value[el.brand_id.brand_name] = [el]);
+  getProductList({ product_name: searchkey.value, size: 10000 })
+    .then((res) => {
+      productList.value = res.data.list;
+      searchkey.value = key;
+      searchList.value = {};
+      productList.value.forEach((el) => {
+        searchList.value[el.brand_id.brand_name]
+          ? searchList.value[el.brand_id.brand_name].push(el)
+          : (searchList.value[el.brand_id.brand_name] = [el]);
+      });
+    })
+    .finally(() => {
+      loading.value = false;
     });
-  });
 };
 watch(
   () => route.params.key,

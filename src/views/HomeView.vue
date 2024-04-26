@@ -1,70 +1,35 @@
 <template>
   <div class="home-banner">
-    <div class="banner-item">
+    <div
+      class="banner-item"
+      v-for="item in indexData.productindex"
+      :key="item.prosuctId"
+    >
       <div class="text">
-        <h2>AX /AX R</h2>
-        <p>智能 深度 清晰的显微镜</p>
+        <h2>{{ item.product_name }}</h2>
+        <p>{{ item.msg }}</p>
         <div class="more-link">
           <a
             href="javascript:;"
             @click="
               dialogshow = true;
-              proItem = { product_name: 'AX /AX R', detail_pdf: 'AX_AXR.pdf' };
+              proItem = item;
             "
             >进一步了解&nbsp;&nbsp;></a
           >
-          <a href="/product/1"> 更多尼康产品&nbsp;&nbsp;></a>
+          <a :href="item.typeId" v-html="item.type"> </a>
         </div>
       </div>
-      <img src="@/assets/home/prod1.png" alt="" />
-    </div>
-
-    <div class="banner-item">
-      <div class="text">
-        <h2>1500 A2 XY</h2>
-        <p>智能物联生物安全柜 ，APP实时监控</p>
-        <div class="more-link">
-          <a
-            href="javascript:;"
-            @click="
-              dialogshow = true;
-              proItem = {
-                product_name: '1500 A2 XY',
-                detail_pdf: 'jingjiegongzt.pdf',
-              };
-            "
-            >进一步了解&nbsp;&nbsp;></a
-          >
-          <a href="/product/2"> 更多海尔产品&nbsp;&nbsp;></a>
-        </div>
-      </div>
-      <img src="@/assets/home/prod2.png" alt="" />
-    </div>
-    <div class="banner-item">
-      <div class="text">
-        <h2>QuantStudioTM</h2>
-        <p>前所未有的简易性，卓尔不群的灵活性</p>
-        <div class="more-link">
-          <a
-            href="javascript:;"
-            @click="
-              dialogshow = true;
-              proItem = {
-                product_name: 'QuantStudioTM',
-                detail_pdf: 'QuantStudio_1.pdf',
-              };
-            "
-            >进一步了解&nbsp;&nbsp;></a
-          >
-          <a href="/product/3"> 更多ThermoFisher产品&nbsp;&nbsp;></a>
-        </div>
-      </div>
-      <img src="@/assets/home/prod3.png" alt="" />
+      <img :src="item.prod_img" alt="" />
     </div>
   </div>
 
   <div class="products">
-    <div class="product-item" v-for="(item, index) in productMsg" :key="index">
+    <div
+      class="product-item"
+      v-for="(item, index) in indexData.productmsg"
+      :key="index"
+    >
       <div class="text">
         <h2>{{ item.product_name }}</h2>
         <p>{{ item.msg }}</p>
@@ -82,7 +47,7 @@
       </div>
 
       <div class="img-box">
-        <img :src="getImage(`home/prod${index + 4}.png`)" :alt="item.title" />
+        <img :src="item.prod_img" :alt="item.title" />
       </div>
     </div>
   </div>
@@ -90,13 +55,13 @@
   <div class="team">
     <div class="container">
       <a
-        :href="teamlinks[index]"
+        :href="item.url"
         target="_blank"
         class="team-item"
-        v-for="(item, index) in 8"
+        v-for="(item, index) in indexData.teamlinks"
         :key="index"
       >
-        <img :src="getImage(`home/team${index + 1}.jpg`)" alt="" />
+        <img :src="item.src" alt="" />
       </a>
     </div>
   </div>
@@ -118,22 +83,19 @@
           </svg>
         </router-link>
       </div>
-      <template v-for="item in newsMsg" :key="item.id">
-        <router-link :to="`/news/detail/${item.id}`" class="news-item">
+      <template v-for="item in indexData.newsMsg" :key="item._id">
+        <router-link :to="`/news/detail/${item.enTitle}`" class="news-item">
           <div class="time">
             {{ item.time }}
           </div>
           <div class="m-time" v-html="item.mtime"></div>
           <div class="img">
-            <img
-              :src="getImage(`news/new${item.id}/img${item.id}-1.jpg`)"
-              :alt="item.title"
-            />
+            <img :src="item.cover" :alt="item.title" />
           </div>
           <div class="content">
             <h2>{{ item.title }}</h2>
             <p class="mx">
-              {{ item.content }}
+              {{ item.desc }}
             </p>
           </div>
         </router-link>
@@ -145,87 +107,25 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, inject } from "vue";
 import productDialog from "../components/productDialog.vue";
+import { getHomeIndex } from "@/utils/api";
 
 // import news from '@/data/news.json';
 const getImage = (name) => new URL(`../assets/${name}`, import.meta.url).href;
 // const getContent = (content) => content.replace(/%([^%]*)%/g, (c, v) => getImage(`news/${v}`))
 const dialogshow = ref(false);
 const proItem = ref();
-const productMsg = [
-  {
-    product_name: "微量热泳动仪",
-    msg: "轻松，快速，精准检测最具挑战的分子间相互作用",
-    type: "更多NanoTemper产品&nbsp;&nbsp;>",
-    typeId: "/product/4",
-    prosuctId: 75,
-    detail_pdf: "wlrydy-Monolith-xl.pdf",
-  },
-  {
-    product_name: "KINETIX",
-    msg: "新一代大视野超高速 sCMOS 相机",
-    type: "更多Teledyne Photometrics产品&nbsp;&nbsp;> ",
-    typeId: "/product/5",
-    prosuctId: 83,
-    detail_pdf: "PM-Kinetix.pdf",
-  },
-  {
-    product_name: "DEPArray",
-    msg: "数字细胞分选平台",
-    type: "更多MENARINI产品&nbsp;&nbsp;>",
-    typeId: "/product/7",
-    prosuctId: 97,
-    detail_pdf: "DEPArrayszxbfxpt.pdf",
-  },
-  {
-    product_name: "世界级超薄切片机",
-    msg: "为包括材料科学和细胞生物学在内的广泛领域提供纳米级研究设计样品制备解决方案",
-    type: "更多RMC Boeckeler产品&nbsp;&nbsp;>",
-    typeId: "/product/6",
-    prosuctId: 88,
-    detail_pdf: "RMC-cbqpjcpml.pdf",
-  },
-];
-
-const teamlinks = [
-  "https://www.microscope.healthcare.nikon.com/zh_CN/products",
-  "https://www.thermofisher.cn/",
-  "http://www.haier.bioon.com.cn/",
-  "https://boeckeler.com/",
-  "https://nanotempertech.com/zh_cn/",
-  "https://www.photometrics.com/products",
-  "https://www.siliconbiosystems.com",
-  "https://www.hitachi.com.cn/products_service/index.html",
-];
-
-const newsMsg = [
-  {
-    id: 10,
-    title: "大湾区生物科技协会携手皇岗边检站开展“助学兴农”公益活动",
-    time: "2023.3.20",
-    mtime: "<span>20</span><span>2023.3</span>",
-    content:
-      "大湾区生物科技协会与皇岗边检站前往三江侗族自治县，开展“助学兴农”公益活动，传播爱心种子，共同助力乡村振兴。深圳市富途锐作为协会一员，有幸参与此次公益助学活动。 ",
-  },
-
-  {
-    id: 8,
-    title: "热烈庆祝富途锐继续与海尔生物医疗合作",
-    time: "2023.1.18",
-    mtime: "<span>18</span><span>2023.1</span>",
-    content:
-      "初春时节，万物复苏，深圳市富途锐科技发展有限公司更迎来喜讯。继2022年小试牛刀，2023年，深圳富途锐继续加深与海尔生物医疗的合作，共同携手开拓市场，为用户提供更多方面服务。",
-  },
-  {
-    id: 7,
-    title: "十年赓续，步履不停--富途锐2023新春年会圆满落幕！",
-    time: "2023.2.20",
-    mtime: "<span>20</span><span>2023.2</span>",
-    content:
-      "回顾2022，我们一起战胜疫情带来的挑战；展望2023，我们携手迈进新征程！",
-  },
-];
+const loading = inject("loading");
+const indexData = ref({ productindex: [{}, {}, {}, {}] });
+loading.value = true;
+getHomeIndex()
+  .then((res) => {
+    indexData.value = res.data;
+  })
+  .finally(() => {
+    loading.value = false;
+  });
 </script>
 <style lang="scss" scoped>
 img {
@@ -236,7 +136,7 @@ img {
   background-color: #1e1e1e;
   .banner-item {
     width: 100%;
-    // height: 540px;
+    min-height: 340px;
     background-color: #000;
     position: relative;
     margin-bottom: 10px;

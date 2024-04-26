@@ -54,3 +54,11 @@ export function getBannerList(params) {
     params,
   });
 }
+
+export function getHomeIndex(params) {
+  return request({
+    url: "/users/api/get_home_index",
+    method: "get",
+    params,
+  });
+}

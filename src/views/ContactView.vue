@@ -30,13 +30,13 @@
           <p>服务时间：{{ siteData.company?.serverTime }}</p>
 
           <div class="qs-code">
-            <img src="@/assets/contact/qs-us.jpg" alt="qs-us" />
+            <img :src="siteData.company?.qrcodeImg" alt="qs-us" />
             <p>fortuantt公众号</p>
           </div>
         </div>
         <div class="tels">
           <div class="item">
-            售前资询经理<br />
+            售前咨询经理<br />
             <b>{{ siteData.company?.presale }}</b>
             <!-- 手机：188 8888 8888<br>
                 邮箱：lyhao@fortuantt.com  -->

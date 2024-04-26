@@ -41,21 +41,25 @@ const detail = ref({});
 // const content = detail.content.replace(/%([^%]*)%/g, (c, v) => getImage(`news/${v}`))
 const reload = inject("reload");
 loading.value = true;
-getnewDetail({ id }).then((res) => {
-  if (res?.code === 200) {
-    detail.value = res.data;
-  }
-  loading.value = false;
-});
+getnewDetail({ id, type: 1 })
+  .then((res) => {
+    if (res?.code === 200) {
+      detail.value = res.data;
+      document.title = res.data.title + "-深圳市富途锐科技发展有限公司";
+    }
+  })
+  .finally(() => {
+    loading.value = false;
+  });
 const toMsg = computed(() => {
   const { next, prev } = detail.value;
   return {
     next: {
-      link: next?.id ? `/news/detail/${next?.id}` : "/news",
+      link: next?.enTitle ? `/news/detail/${next?.enTitle}` : "/news",
       title: next?.title ? `下一篇：${next?.title}` : "返回新闻资讯",
     },
     prev: {
-      link: prev?.id ? `/news/detail/${prev?.id}` : "/news",
+      link: prev?.enTitle ? `/news/detail/${prev?.enTitle}` : "/news",
       title: prev?.title ? `上一篇：${prev?.title}` : "返回新闻资讯",
     },
   };
@@ -95,9 +99,12 @@ watch(
     // }
     p {
       margin-bottom: 20px;
-      text-indent: 36px;
       font-weight: 400;
       line-height: 36px;
+      // display: flex;
+      &[style*="text-align: center;"] {
+        text-indent: 0 !important;
+      }
     }
     h3 {
       margin: 50px 0 20px;

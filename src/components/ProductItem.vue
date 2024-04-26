@@ -1,7 +1,13 @@
 <template>
   <div :class="`product-item`" v-bind="$attrs">
     <div class="img-box">
-      <img :src="proItem.product_image" :alt="proItem.product_name" />
+      <el-image
+        :key="proItem.product_image"
+        :src="proItem.product_image"
+        lazy
+        fit="contain"
+      ></el-image>
+      <!-- <img :src="proItem.product_image" :alt="proItem.product_name" /> -->
     </div>
     <p>{{ proItem.product_name }}</p>
   </div>
@@ -14,6 +20,10 @@ defineProps({
 </script>
 
 <style lang="scss" scoped>
+.el-image {
+  width: 100%;
+  height: 100%;
+}
 .product-item {
   width: 260px;
   height: 260px;

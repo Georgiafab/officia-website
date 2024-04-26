@@ -10,14 +10,14 @@
         @click="$router.push('/')"
         v-if="$route.name === 'home'"
         class="logo"
-        src="@/assets/logo2.png"
+        :src="siteData.company?.logo2"
       />
       <img
         alt="logo"
         @click="$router.push('/')"
         v-else
         class="logo"
-        src="@/assets/logo.jpg"
+        :src="siteData.company?.logo1"
       />
     </div>
     <div class="wrap">
@@ -27,17 +27,22 @@
           @click="$router.push('/')"
           v-if="$route.name === 'home'"
           class="logo"
-          src="@/assets/logo2.png"
+          :src="siteData.company?.logo2"
         />
         <img
           alt="logo"
           @click="$router.push('/')"
           v-else
           class="logo"
-          src="@/assets/logo.jpg"
+          :src="siteData.company?.logo1"
         />
         <div class="search-box">
-          <input type="text" v-model="searchkey" @keyup.enter="toSearch" />
+          <input
+            type="text"
+            v-model="searchkey"
+            placeholder="输入产品型号"
+            @keyup.enter="toSearch"
+          />
           <span @click="toSearch">搜索</span>
         </div>
       </div>
@@ -272,7 +277,8 @@ header .wrap {
 </style>
 
 <script setup>
-import { ref, watch } from "vue";
+import { ref, watch, inject } from "vue";
+const siteData = inject("siteData");
 import { useRouter, useRoute } from "vue-router";
 const router = useRouter();
 const route = useRoute();
